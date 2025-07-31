@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+       font-family: "Roboto Condensed", sans-serif !important;
+       font-optical-sizing: auto;
+       font-weight: 400 !important;
+       font-size: xx-large;
+       background-color: rgb(230, 230, 230) !important;
+}
+
+header{
+       position: relative;
+}
+
+.navbar{
+       background-color: rgb(18, 29, 46);
+       width: 100%;
+       height: 70px;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+}
+
+.logo{
+       padding-left: 70px;
+       font-size: 23px;
+       font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+       text-decoration: none;
+       color: white;
+       cursor: pointer;
+       margin: 0;
+}
+
+.content{
+       display: flex;
+       color: rgb(177, 177, 177);
+       padding-right: 70px;
+       align-items: center;
+}
+
+.content .items{
+       display: flex;
+       gap: 40px;
+       padding-right: 40px;
+}
+
+.items a{
+       position: relative;
+       text-decoration: none;
+       color: rgb(177, 177, 177);
+}
+
+.items a::before{
+       content: "";
+       position: absolute;
+       bottom: -2px;
+       height: 2px;
+       width: 0;
+       background-color: white;
+       border-radius: 50px;
+       transition: width .1s ease;
+}
+
+.items a:hover:before{
+       width: 100%;
+}
+
+.menu:hover{
+       color: white;
+}
+
+.login{
+       display: flex;
+       gap: 15px;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+}
+
+.login button{
+       background-color: white;
+       width: 65px;
+       height: 30px;
+       color: rgb(18, 29, 46);
+       border-radius: 10px;
+       font-weight: 600;
+}
+
+.login button:active{
+       transform: scale(1.05);
+}
+
+.login img{
+       width: 35px;
+       height: 35px;
+}
+
+.toggle{
+       width: 40px;
+       height: 100%;
+       display: none;
+       z-index: 1100;
+}
+
+.container {
+       display: inline-block;
+       cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+       width: 30px;
+       height: 4px;
+       border-radius: 30px;
+       background-color: #ffffff;
+       margin: 4px 0;
+       transition: 0.5s;
+}
+
+.change .bar1 {
+       transform: translate(0, 8px) rotate(-45deg);
+}  
+
+.change .bar2 {
+       opacity: 0;
+}
+
+.change .bar3 {
+       transform: translate(0, -8px) rotate(45deg);
+}
+
+.sidebar{
+       position: fixed;
+       top: 0;
+       right: -300px;
+       width: 300px;
+       height: 100%;
+       background-color: rgb(18, 29, 46);
+       padding-top: 60px;
+       transition: right .3s cubic-bezier(0.175, 0.885, 0.32, 1.095);
+       color: white;
+       z-index:1000;
+       left: auto;
+}
+
+.sidebar.active {
+       right: 0;
+}
+
+.sidebar .items img{
+       width: 50px;
+       height: 50px;
+}
+
+.sidebar button {
+       background-color: white;
+       width: 65px;
+       height: 35px;
+       color: rgb(26, 40, 61);
+       border-radius: 10px;
+       font-weight: 600;
+}
+
+.sidebar button:active {
+       transform: scale(1.05);
+}
+
+.sidebar li{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       padding-top: 1em;
+       font-size: 22px;
+}
+
+.carousel{
+       margin: 10px;
+       margin-top: 20px;
+       border-radius: 50px;
+}
+
+.top_offers{
+       background-color: white;
+       margin: 20px;
+}
+
+@media (max-width:780px){
+       .content .items, .login{
+              display: none;
+       }
+
+       .toggle{
+              display: block;
+       }
+}
+
+@media (min-width:781px) {
+       .sidebar{
+              display: none;
+       }
+}
