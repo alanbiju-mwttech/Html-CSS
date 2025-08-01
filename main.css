@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
+html,
+body {
+       overscroll-behavior: none;
+}
+
 body{
        font-family: "Roboto Condensed", sans-serif !important;
        font-optical-sizing: auto;
@@ -19,6 +24,8 @@ header{
        display: flex;
        align-items: center;
        justify-content: space-between;
+       /* position: sticky !important;
+       top: 0; */
 }
 
 .logo{
@@ -180,10 +187,77 @@ header{
        border-radius: 50px;
 }
 
-.top_offers{
+.top_offers {
        background-color: white;
-       margin: 20px;
+       padding-inline: 16px; /* Replaces margin for responsive spacing */
+       padding-block: 20px;
+       width: 97%;
+       margin: auto;
+       margin-top: 16px;
+       overflow: hidden;
+       box-sizing: border-box;
 }
+   
+.top_offers .heading {
+       padding-bottom: 10px;
+       font-size: 1.5rem;
+       font-weight: 600;
+       margin: 0;
+}
+   
+.card-container {
+       display: flex;
+       overflow-x: auto;
+       gap: 16px;
+       padding-bottom: 16px;
+       scroll-behavior: smooth;
+       -ms-overflow-style: none;
+       scrollbar-width: none;
+}
+   
+.card-container::-webkit-scrollbar {
+       display: none;
+}
+   
+.card {
+       flex: 0 0 auto;
+       min-width: 180px;
+       height: 300px;
+       background-color: #f0f0f0;
+       border: none !important;
+       text-align: center;
+       border-radius: 8px;
+}
+   
+.card-img img {
+       width: 100%;
+       max-width: 180px;
+       height: auto;
+       display: block;
+       margin: auto;
+       object-fit: contain;
+       cursor: pointer;
+}
+
+.card-img:hover{
+       transform: scale(1.05);
+       transition: scale .5 ease;
+}
+   
+.card-text {
+       margin-top: 10px;
+}
+   
+.card-text .text-head {
+       font-size: 1rem;
+       font-weight: 600;
+}
+   
+.card-text .text-body {
+       font-size: 1.1rem;
+       color: red !important;
+}
+   
 
 @media (max-width:780px){
        .content .items, .login{
