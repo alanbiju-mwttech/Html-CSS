@@ -257,7 +257,191 @@ header{
        font-size: 1.1rem;
        color: red !important;
 }
-   
+
+footer{
+       background-color: rgb(18, 29, 46);
+       margin-top: 20px;
+       height: 400px;
+       padding-top: 100px;
+       text-align: start;
+       padding-left: 60px;
+       font-size: 1.1rem;
+}
+
+footer p{
+       margin-bottom: 1rem !important;
+}
+
+.contact h1{
+       font-size: 2.3rem;
+}
+
+.search-box {
+       display: flex;
+       width: 400px;
+       border: 1px solid #616161;
+       border-radius: 7px;
+       overflow: hidden;
+       background-color: white;
+       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-box input {
+       flex: 1;
+       border: none;
+       padding: 10px 15px;
+       font-size: 16px;
+       outline: none;
+       color: #000;
+}
+
+.search-box button {
+       color: rgb(0, 0, 0);
+       border: none;
+       padding: 15px 20px;
+       font-size: 16px;
+       cursor: pointer;
+       transition: background 0.3s ease;
+}
+
+.search-box button img {
+       width: 20px;
+       height: 20px;
+       margin: auto;
+       opacity: 70%;
+}
+
+.search-box button:active{
+       background-color: #616161;
+}
+
+.social{
+       display: flex;
+       gap: 10px;
+       margin-top: 10px;
+}
+
+.insta{
+       width: 40px;
+       height: 40px;
+       border-radius: 100%;
+       background-color: #ffffff;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       transition: all .1s ease-in;
+}
+
+.insta:hover {
+       background-color: #f71f86;
+       transform: scale(1.05);
+       box-shadow: 0 0 15px #f71f86;
+}
+
+.insta:hover img{
+       filter: invert(1);
+       transition: filter 0.3sease;
+       margin-right: 1px;
+}
+
+.fb {
+       width: 40px;
+       height: 40px;
+       border-radius: 100%;
+       background-color: #ffffff;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       transition: all .1s ease-in;
+}
+
+.fb:hover {
+       background-color: #1877f2;
+       transform: scale(1.05);
+       box-shadow: 0 0 15px #1877f2;
+}
+
+.fb:hover img {
+       filter: invert(1);
+       transition: filter 0.3sease;
+       margin-right: 1px;
+}
+
+.x {
+       width: 40px;
+       height: 40px;
+       border-radius: 100%;
+       background-color: #ffffff;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       transition: all .1s ease-in;
+}
+
+.x:hover {
+       background-color: #000000;
+       transform: scale(1.05);
+       box-shadow: 0 0 15px #000000;
+}
+
+.x:hover img {
+       filter: invert(1);
+       transition: filter 0.3sease;
+       margin-right: 1px;
+}
+
+
+.social img{
+       width: 25px;
+       height: 25px;
+}
+
+.address {
+       text-decoration: none;
+       color: #ffffff;
+}
+
+.address p {
+       text-decoration: none;
+       color: rgb(177, 177, 177);
+}
+
+footer ul li {
+       position: relative;
+       font-size: larger;
+       color: rgb(177, 177, 177);
+       margin-bottom: 8px;
+       list-style: none;  
+}
+
+footer ul li span {
+       position: relative;
+       display: inline-block;
+       cursor: pointer; 
+}
+
+footer ul li span::before {
+       content: "";
+       position: absolute;
+       bottom: -2px;
+       height: 1px;
+       width: 0;
+       background-color: white;
+       border-radius: 50px;
+       transition: width .3s ease;
+}
+
+footer ul li span:hover{
+       color: #ffffff;
+}
+
+.address .link:hover {
+       color: #ffffff;
+}
+
+footer ul li span:hover:before {
+       width: 100%;
+}
 
 @media (max-width:780px){
        .content .items, .login{
