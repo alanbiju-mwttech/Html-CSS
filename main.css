@@ -358,8 +358,12 @@ footer p{
 .insta:hover img{
        filter: invert(1);
        transition: filter 0.3sease;
+<<<<<<< HEAD
        margin-right: .5px;
        margin-bottom: .5px;
+=======
+       margin-right: 1px;
+>>>>>>> b4ddd109a61684445f9f4c70d72819b74a67eb8b
 }
 
 .fb {
@@ -381,9 +385,14 @@ footer p{
 
 .fb:hover img {
        filter: invert(1);
+<<<<<<< HEAD
        transition: filter 0.3s ease;
        margin-right: .5px;
        margin-bottom: .5px;
+=======
+       transition: filter 0.3sease;
+       margin-right: 1px;
+>>>>>>> b4ddd109a61684445f9f4c70d72819b74a67eb8b
 }
 
 .x {
@@ -405,7 +414,12 @@ footer p{
 
 .x:hover img {
        filter: invert(1);
+<<<<<<< HEAD
        transition: filter 0.3s ease-in;
+=======
+       transition: filter 0.3sease;
+       margin-right: 1px;
+>>>>>>> b4ddd109a61684445f9f4c70d72819b74a67eb8b
 }
 
 
