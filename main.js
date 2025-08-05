@@ -20,12 +20,27 @@ document.querySelectorAll('.card').forEach(card => {
 
 const product = JSON.parse(sessionStorage.getItem('selectedProduct'))
 
-if (product) {
-       document.getElementById('product-details').innerHTML = `
-      <img src="${product.image}" alt="${product.name}" width="300">
-      <h2>${product.name}</h2>
-      <p style="font-size: 1.1rem, color: red !important">Price: ${product.price}</p>
-    `;
-} else {
-       document.getElementById('product-details').innerHTML = `<p>No product found.</p>`;
+// if (product) {
+//        document.getElementById('product-details').innerHTML = `
+//       <img src="${product.image}" alt="${product.name}" width="300">
+//       <h2>${product.name}</h2>
+//       <p style="font-size: 1.1rem, color: red !important">Price: ${product.price}</p>
+//     `;
+// } else {
+//        document.getElementById('product-details').innerHTML = `<p>No product found.</p>`;
+// }
+
+function decrease(){
+       value = document.getElementById('number').innerText
+       if(value == 0){
+              document.getElementById('number').innerText = value
+       }
+       else{
+              document.getElementById('number').innerText = --value
+       }      
+}
+
+function increase() {
+       value = document.getElementById('number').innerText
+              document.getElementById('number').innerText = ++value
 }

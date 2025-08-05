@@ -72,7 +72,24 @@ header{
        width: 100%;
 }
 
-.menu:hover{
+.menu img {
+       width: 22px;
+       height: 22px;
+       opacity: 50%;
+       /* transition: opacity 0.3s ease; */
+}
+
+.cart {
+       display: flex;
+       gap: 5px;
+       align-items: center;
+}
+
+.cart:hover img {
+       opacity: 100%;
+}
+
+.menu:hover {
        color: white;
 }
 
@@ -341,7 +358,8 @@ footer p{
 .insta:hover img{
        filter: invert(1);
        transition: filter 0.3sease;
-       margin-right: 1px;
+       margin-right: .5px;
+       margin-bottom: .5px;
 }
 
 .fb {
@@ -364,7 +382,8 @@ footer p{
 .fb:hover img {
        filter: invert(1);
        transition: filter 0.3s ease;
-       margin-right: 1px;
+       margin-right: .5px;
+       margin-bottom: .5px;
 }
 
 .x {
@@ -387,7 +406,6 @@ footer p{
 .x:hover img {
        filter: invert(1);
        transition: filter 0.3s ease-in;
-       margin-right: 1px;
 }
 
 
@@ -451,6 +469,14 @@ footer ul li span:hover:before {
        .toggle{
               display: block;
        }
+
+       .sidebar .cart img{
+              width: 20px;
+              height: 20px;
+              opacity: 50%;
+              /* transition: opacity 0.3s ease; */      
+       }
+
 }
 
 @media (min-width:781px) {
