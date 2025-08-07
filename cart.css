@@ -358,7 +358,14 @@ header {
 }
 
 @media (max-width:780px) {
+       .logo{
+              padding-left: 30px;
+       }
 
+       .content{
+              padding-right: 30px;
+       }
+       
        .content .items,
        .login {
               display: none;

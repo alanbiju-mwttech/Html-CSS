@@ -309,6 +309,13 @@ header {
 }
 
 @media (max-width:780px) {
+       .logo{
+              padding-left: 30px;
+       }
+
+       .content{
+              padding-right: 30px;
+       }
 
        .content .items,
        .login {
@@ -343,7 +350,43 @@ header {
 
        .details {
               width: 100%;
-              padding: 20px 0;         }
+              padding: 20px 0;
+       }
+
+       .container .row, .container .row .col{
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              text-align: center;
+       }
+
+       footer{
+              margin: 0;
+              padding: 0;
+              padding-top: 50px;
+       }
+
+       footer ul li{
+              margin-bottom: 0;
+       }
+
+       .social{
+              justify-content: center;
+              margin-bottom: 20px;
+       }
+
+       .address{
+              margin-bottom: 20px;
+       }
+
+       footer p{
+              margin-bottom: 0;
+       }
+
+       col{
+              margin-bottom: 10px;
+       }
 }
 
 @media (min-width:781px) {
