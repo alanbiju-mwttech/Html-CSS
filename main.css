@@ -8,8 +8,6 @@ body {
 body{
        font-family: "Roboto Condensed", sans-serif !important;
        font-optical-sizing: auto;
-       font-weight: 400 !important;
-       font-size: xx-large;
        background-color: rgb(230, 230, 230) !important;
 }
 
@@ -55,6 +53,8 @@ header{
        position: relative;
        text-decoration: none;
        color: rgb(177, 177, 177);
+       font-size: large;
+       font-weight: 500;
 }
 
 .items a::before{
@@ -240,7 +240,7 @@ header{
        flex: 0 0 auto;
        min-width: 180px;
        height: 300px;
-       background-color: #f0f0f0;
+       /* background-color: #f0f0f0; */
        border: none !important;
        text-align: center;
        border-radius: 8px;
@@ -318,7 +318,7 @@ footer p{
        padding: 15px 20px;
        font-size: 16px;
        cursor: pointer;
-       transition: background 0.3s ease;
+       transition: background-color 0.3s ease;
 }
 
 .search-box button img {
@@ -358,12 +358,7 @@ footer p{
 .insta:hover img{
        filter: invert(1);
        transition: filter 0.3sease;
-<<<<<<< HEAD
-       margin-right: .5px;
-       margin-bottom: .5px;
-=======
        margin-right: 1px;
->>>>>>> b4ddd109a61684445f9f4c70d72819b74a67eb8b
 }
 
 .fb {
@@ -385,14 +380,8 @@ footer p{
 
 .fb:hover img {
        filter: invert(1);
-<<<<<<< HEAD
-       transition: filter 0.3s ease;
-       margin-right: .5px;
-       margin-bottom: .5px;
-=======
        transition: filter 0.3sease;
        margin-right: 1px;
->>>>>>> b4ddd109a61684445f9f4c70d72819b74a67eb8b
 }
 
 .x {
@@ -414,12 +403,8 @@ footer p{
 
 .x:hover img {
        filter: invert(1);
-<<<<<<< HEAD
-       transition: filter 0.3s ease-in;
-=======
        transition: filter 0.3sease;
        margin-right: 1px;
->>>>>>> b4ddd109a61684445f9f4c70d72819b74a67eb8b
 }
 
 

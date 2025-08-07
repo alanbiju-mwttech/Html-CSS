@@ -44,3 +44,39 @@ function increase() {
        value = document.getElementById('number').innerText
               document.getElementById('number').innerText = ++value
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+       document.querySelectorAll('.incrementor').forEach(incrementor => {
+              const numberDiv = incrementor.querySelector('.number');
+              const lessBtn = incrementor.querySelector('.less');
+              const moreBtn = incrementor.querySelector('.more');
+              const removeBtn = incrementor.querySelector('.remove');
+
+              moreBtn.addEventListener('click', () => {
+                     let count = parseInt(numberDiv.textContent) || 0;
+                     count++;
+                     numberDiv.textContent = count;
+              });
+
+              lessBtn.addEventListener('click', () => {
+                     let count = parseInt(numberDiv.textContent) || 0;
+                     if (count > 0) {
+                            count--;
+                            numberDiv.textContent = count;
+                     }
+              });
+
+              // removeBtn.addEventListener('click', () => {
+              //        productDiv.classList.toggle("removed");
+              // });
+
+              if (removeBtn) {
+                     removeBtn.addEventListener('click', () => {
+                            const productElement = removeBtn.closest('.each-products');
+                            if (productElement) {
+                                   productElement.remove(); // or .remove() if you want to delete it
+                            }
+                     });
+              }
+       });
+});
