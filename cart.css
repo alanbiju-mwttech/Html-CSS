@@ -386,6 +386,15 @@ header {
               position: static;    
               margin: 10px 0;    
        }
+
+       .buttons{
+              justify-content: center;
+              margin-right: 0;       
+       }
+
+       .buttons button{
+              width: 100%;
+       }
 }
 
 @media (min-width:781px) {

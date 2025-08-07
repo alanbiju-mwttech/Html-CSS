@@ -16,7 +16,7 @@ body{
        display: flex;
        align-items: center;
        justify-content: center;
-       animation: spin 3s linear infinite;
+       animation: spin 1s alternate-reverse infinite;
 }
 
 .red{
@@ -29,7 +29,7 @@ body{
        display: flex;
        align-items: center;
        justify-content: center;
-       animation: spin 2s linear infinite;
+       animation: spin 1s alternate-reverse infinite;
 }
 
 .blue{
@@ -42,7 +42,7 @@ body{
        display: flex;
        align-items: center;
        justify-content: center;
-       animation: spin 1s linear infinite;
+       animation: spin 1s alternate-reverse infinite;
 }
 
 @keyframes spin {
