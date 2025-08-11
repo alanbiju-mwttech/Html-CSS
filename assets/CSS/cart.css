@@ -96,7 +96,6 @@ header {
 }
 
 .login {
-       display: flex;
        gap: 15px;
        display: flex;
        align-items: center;
@@ -386,6 +385,7 @@ header {
        .cart-page {
               flex-direction: column;
               margin: 15px;
+              margin-top: 75px;
        }
 
        .payment,

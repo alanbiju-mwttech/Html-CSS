@@ -1,13 +1,9 @@
 const sidebar = document.getElementById("sidebar");
 let products = {}
 
-console.log(2342342)
-
 function myFunction(x) {
     x.classList.toggle("change");
     sidebar.classList.toggle("active");
-    let userName = prompt("Please enter your name:");
-    console.log(userName)
 }
 
 document.querySelectorAll('.card').forEach(card => {
@@ -18,7 +14,7 @@ document.querySelectorAll('.card').forEach(card => {
 
         products = { image, name, price };
         sessionStorage.setItem('selectedProduct', JSON.stringify(product));
-        window.location.href = '/assets/HTML/products.html';
+        window.location.href = '/HTML-CSS/assets/HTML/products.html';
     });
 });
 
@@ -81,3 +77,14 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+document.querySelectorAll('.product-card').forEach(card => {
+    card.addEventListener('click', function () {
+        window.location.href = '/HTML-CSS/assets/HTML/products.html';
+    });
+});
+
+document.querySelectorAll('.each-products > img').forEach(card => {
+    card.addEventListener('click', function () {
+        window.location.href = '/HTML-CSS/assets/HTML/products.html';
+    });
+});

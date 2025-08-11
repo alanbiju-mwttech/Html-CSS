@@ -92,7 +92,6 @@ header{
 }
 
 .login{
-       display: flex;
        gap: 15px;
        display: flex;
        align-items: center;
