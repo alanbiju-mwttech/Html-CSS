@@ -79,12 +79,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.querySelectorAll('.product-card').forEach(card => {
     card.addEventListener('click', function () {
-        window.location.href = '/HTML-CSS/assets/HTML/products.html';
+        window.location.href = '/Html-CSS/assets/HTML/products.html';
     });
 });
 
 document.querySelectorAll('.each-products > img').forEach(card => {
     card.addEventListener('click', function () {
-        window.location.href = '/HTML-CSS/assets/HTML/products.html';
+        window.location.href = '/Html-CSS/assets/HTML/products.html';
     });
 });
