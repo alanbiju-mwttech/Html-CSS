@@ -1,7 +1,7 @@
 body {
     font-family: "Roboto Condensed", sans-serif !important;
     font-optical-sizing: auto;
-    background-color: rgb(18, 29, 46) !important;
+    background-color: rgb(230, 230, 230) !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,22 +13,24 @@ body {
     background-color: white;
     width: 25%;
     margin: auto;
-    border-radius: 10px;
-    border: rgb(255, 255, 255) solid 1px;
+    border: #121d2e 3px solid; 
+    border-radius: 20px;
+    filter: drop-shadow(0 0px 25px rgba(0, 0, 0, 0.377) );
 }
 
 .header{
+    margin-top: 30px;
     text-align: center;
     font-size: x-large;
     font-weight: 600;
 }
 
-.login hr{
-    margin: 1px;
-}
-
 .form{
     margin: 10px;
+}
+
+.form-row label{
+    font-weight: bolder;
 }
 
 .form-row{
@@ -37,9 +39,20 @@ body {
     margin: 10px;
 }
 
+.form-row p{
+    text-align: center;
+}
+
+.form-row a{
+    font-size: smaller;
+    margin-top: -5px;
+    text-decoration-line: none;
+    /* color: #0d6efd; */
+}
+
 /* .form-row label{
-    font-size: large;
-    font-weight: 300;
+        font-size: large;
+        font-weight: 300;
 } */
 
 .form-control{
@@ -56,7 +69,13 @@ body {
 .button button{
     background-color: rgb(18, 29, 46);
     border-radius: 50px;
-    width: 150px;
+    width: 100%;
     height: 35px;
     color: white;
+    margin: 0 10px 0px 10px;
 }
+
+
+/*Sign up*/
+
+

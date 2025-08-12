@@ -1,10 +1,66 @@
 const sidebar = document.getElementById("sidebar");
+const loginBtn = document.getElementById('login')
+const signoutBtn = document.getElementById('signout')
+const sideloginBtn = document.getElementById('side-bar-login')
+const sidesignoutBtn = document.getElementById('side-bar-logout')
 let products = {}
 
+let loggedIn = true;
+console.log(loggedIn);
 function myFunction(x) {
     x.classList.toggle("change");
     sidebar.classList.toggle("active");
 }
+
+if (loggedIn === false) {
+    signoutBtn.classList.toggle("active");
+    sidesignoutBtn.classList.toggle("active")
+}
+else {
+    loginBtn.classList.toggle("active");
+    sideloginBtn.classList.toggle("active")
+}
+
+[sidesignoutBtn, signoutBtn].forEach(btn => {
+    btn?.addEventListener('click', function() {
+        loggedIn = !loggedIn;
+        console.log(loggedIn);
+        if (loggedIn === false) {
+            signoutBtn.classList.toggle("active");
+            sidesignoutBtn.classList.toggle("active")
+            loginBtn.classList.toggle("active");
+            sideloginBtn.classList.toggle("active")
+        }
+        else {
+            loginBtn.classList.toggle("active");
+            sideloginBtn.classList.toggle("active")
+            signoutBtn.classList.toggle("active");
+            sidesignoutBtn.classList.toggle("active")
+        }
+    })
+}) 
+
+[sideloginBtn, loginBtn].forEach(btn => {
+    btn?.addEventListener('click', function () {
+        loggedIn = !loggedIn;
+        console.log(loggedIn);
+        if (loggedIn === false) {
+            signoutBtn.classList.toggle("active");
+            sidesignoutBtn.classList.toggle("active")
+            loginBtn.classList.toggle("active");
+            sideloginBtn.classList.toggle("active")
+        }
+        else {
+            loginBtn.classList.toggle("active");
+            sideloginBtn.classList.toggle("active")
+            signoutBtn.classList.toggle("active");
+            sidesignoutBtn.classList.toggle("active")
+        }
+    })
+})
+// document.querySelectorAll('.login').addEventListener('click', function (){
+//     loggedIn = !loggedIn
+// })
 
 document.querySelectorAll('.card').forEach(card => {
     card.addEventListener('click', function () {
@@ -14,7 +70,7 @@ document.querySelectorAll('.card').forEach(card => {
 
         products = { image, name, price };
         sessionStorage.setItem('selectedProduct', JSON.stringify(product));
-        window.location.href = '/HTML-CSS/assets/HTML/products.html';
+        window.location.href = './assets/HTML/products.html';
     });
 });
 
@@ -79,12 +135,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.querySelectorAll('.product-card').forEach(card => {
     card.addEventListener('click', function () {
-        window.location.href = '/Html-CSS/assets/HTML/products.html';
+        window.location.href = './products.html';
     });
 });
 
 document.querySelectorAll('.each-products > img').forEach(card => {
     card.addEventListener('click', function () {
-        window.location.href = '/Html-CSS/assets/HTML/products.html';
+        window.location.href = './products.html';
     });
 });
+
+function SignUp() {
+    
+}
