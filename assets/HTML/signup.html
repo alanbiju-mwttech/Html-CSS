@@ -18,30 +18,32 @@
               <div class="header">
                      Login
               </div>
-              <div class="form">
-                     <div class="form-row">
-                            <label for="username">Username</label>
-                            <input class="form-control" type="text" name="username" placeholder="Enter your Username">
+              <form name="signup" id="signupid">
+                     <div class="form">
+                            <div class="form-row">
+                                   <label for="username">Username</label>
+                                   <input class="form-control" type="text" name="username" placeholder="Enter your Username" required>
+                            </div>
+                            <div class="form-row">
+                                   <label for="name">Full Name</label>
+                                   <input class="form-control" type="text" name="fullname"placeholder="Enter your Full Name" required>
+                            </div>
+                            <div class="form-row">
+                                   <label for="email">Email ID</label>
+                                   <input class="form-control" type="email" name="emailid" placeholder="Enter your Email ID" required>
+                            </div>
+                            <div class="form-row">
+                                   <label for="password">Password</label>
+                                   <input class="form-control" type="password" name="password" placeholder="Enter your Password" required>
+                            </div>
+                            <div class="button">
+                                   <button type="submit" id="signupBtn">Create Account</button>
+                            </div>
+                            <div class="form-row">
+                                   <p>Already have an account? <a href="login.html">Login</a></p>
+                            </div>
                      </div>
-                     <div class="form-row">
-                            <label for="name">Full Name</label>
-                            <input class="form-control" type="text" name="username"placeholder="Enter your Full Name" required>
-                     </div>
-                     <div class="form-row">
-                            <label for="email">Email ID</label>
-                            <input class="form-control" type="email" name="username" placeholder="Enter your Email ID">
-                     </div>
-                     <div class="form-row">
-                            <label for="password">Password</label>
-                            <input class="form-control" type="password" name="password" placeholder="Enter your Password">
-                     </div>
-                     <div class="button">
-                            <button onclick="SignUp">Login</button>
-                     </div>
-                     <div class="form-row">
-                            <p>Already have an account? <a href="login.html">Login</a></p>
-                     </div>
-              </div>
+              </form>
        </div>
        <script src="../JS/main.js"></script>
 </body>
