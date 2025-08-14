@@ -18,28 +18,29 @@
               <div class="header">
                      Login
               </div>
-              <form name="login" action="">
-                     <div class="form" >
-                            <div class="form-row">
-                                   <label for="username">Username</label>
-                                   <input class="form-control" type="text" name="username" placeholder="Enter your Username" required>
-                            </div>
-                            <div class="form-row">
-                                   <label for="password">Password</label>
-                                   <input class="form-control" type="password" name="password" placeholder="Enter your Password" required>
-                            </div>
-                            <div class="form-row">
-                                   <a href="#">Forget Password</a>
-                            </div>
-                            <div class="button">
-                                   <button>Login</button>
-                            </div>
-                            <div class="form-row">
-                                   <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
-                            </div>
+              <div class="form" >
+                     <div class="form-row">
+                            <label for="username">Username</label>
+                            <input id="login-username" class="form-control" type="text" name="username" placeholder="Enter your Username">
+                            <div class="message" id="login-username-error"></div>
                      </div>
-              </form>
+                     <div class="form-row">
+                            <label for="password">Password</label>
+                            <input id="login-password" class="form-control" type="password" name="password" placeholder="Enter your Password">
+                            <div class="message" id="login-password-error"></div>
+                     </div>
+                     <div class="form-row">
+                            <a href="#">Forget Password</a>
+                     </div>
+                     <div class="button">
+                            <button id="loginBtn">Login</button>
+                     </div>
+                     <div class="form-row">
+                            <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+                     </div>
+              </div>
        </div>
        <script src="../JS/main.js"></script>
+       <script src="../JS/login.js"></script>
 </body>
 </html>
