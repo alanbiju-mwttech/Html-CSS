@@ -13,6 +13,8 @@ let user = {
     }
 };
 
+console.log("Available Screen Width: " + window.innerWidth + " pixels");
+console.log("Available Screen Height: " + window.innerHeight + " pixels");
 
 function exist(form_username) {
     return Object.values(user).some(u => form_username === u.UserName);
@@ -47,7 +49,7 @@ const password_error = document.getElementById('password-error')
 
 document.addEventListener('DOMContentLoaded', function () {
     submit.addEventListener("click", function () {
-        let redirect = false
+        let redirect = []
 
         username = document.getElementById("username").value
         fname = document.getElementById("fname").value
@@ -55,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
         password = document.getElementById("password").value
 
         if (!username || !fname || !email || !password) {
-            redirect = false
+            redirect[0] = false
             if (!username) { username_error.innerText = "Enter the username" }
             else { username_error.innerText = "" }
 
@@ -75,33 +77,39 @@ document.addEventListener('DOMContentLoaded', function () {
             password_error.innerText = ""
 
             if (exist(username)) {
-                redirect = false
+                redirect[0] = false
                 username_error.innerText = "Username already exist"
             }
             else {
-                redirect = true
+                redirect[0] = true
                 username_error.innerText = ""
             }
             if (!verify_email(email)) {
-                redirect = false
+                redirect[1] = false
                 email_error.innerText = "Please enter a valid Email id"
             }
             else {
-                redirect = true
+                redirect[1] = true
                 email_error.innerText = ""
             }
             if (password.length < 8) {
-                redirect = false
+                redirect[2] = false
                 password_error.innerText = "Password should contain atleast 8 characters"
             }
             else if (password.length >= 8) {
-                [password_error.innerText, redirect] = verify_password(password)
+                [password_error.innerText, redirect[2]] = verify_password(password)
             }
         }
         console.log(username, password, email, fname)
-        if (redirect) {
+        let decide = redirect.values().some(redirect => redirect == false)
+        if (decide == false) {
             localStorage.setItem('logged_in', true)
+            console.log("not")
             window.location.href = localStorage.getItem('path')
         }
     });
 })
+
+const size = document.getElementById('size')
+
+size.innerText = `${window.innerWidth}px, ${window.innerHeight}px`;
