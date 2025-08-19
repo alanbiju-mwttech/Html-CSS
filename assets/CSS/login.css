@@ -75,7 +75,6 @@ body {
     margin: 0 10px 0px 10px;
 }
 
-
 /*Sign up*/
 .message{
     font-size: small;
@@ -85,5 +84,11 @@ body {
 @media (max-width:800px) {
     .login{
         width: 50%;
+    }
+}
+
+@media (max-width:550px) {
+    .login{
+        width: 80%;
     }
 }

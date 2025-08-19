@@ -13,9 +13,6 @@ let user = {
     }
 };
 
-console.log("Available Screen Width: " + window.innerWidth + " pixels");
-console.log("Available Screen Height: " + window.innerHeight + " pixels");
-
 function exist(form_username) {
     return Object.values(user).some(u => form_username === u.UserName);
 }
@@ -109,7 +106,3 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 })
-
-const size = document.getElementById('size')
-
-size.innerText = `${window.innerWidth}px, ${window.innerHeight}px`;
