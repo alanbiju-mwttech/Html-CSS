@@ -57,6 +57,7 @@ const login_username_error = document.getElementById('login-username-error')
             }
         }
         if (redirect) {
+            localStorage.setItem('logged_in',true)
             window.location.href = "../../index.html"
         }
     })

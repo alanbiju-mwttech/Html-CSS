@@ -1,92 +1,32 @@
 const sidebar = document.getElementById("sidebar");
-const loginBtn = document.getElementById('login')
-const signoutBtn = document.getElementById('signout')
 const sideloginBtn = document.getElementById('side-bar-login')
-const sidesignoutBtn = document.getElementById('side-bar-logout')
-let products = {}
+const login = document.getElementById('login')
 
-let loggedIn = false;
+if (localStorage.getItem('logged_in') === null) {
+    localStorage.setItem('logged_in', false);
+}
 
 function myFunction(x) {
     x.classList.toggle("change");
     sidebar.classList.toggle("active");
 }
 
-// if (loggedIn === false) {
-//     signoutBtn.classList.toggle("active");
-//     sidesignoutBtn.classList.toggle("active")
-// }
-
-// else {
-//     loginBtn.classList.toggle("active");
-//     sideloginBtn.classList.toggle("active")
-// }
-
-[sidesignoutBtn, signoutBtn].forEach(btn => {
-    btn?.addEventListener('click', function() {
-        loggedIn = !loggedIn;
-        console.log(loggedIn);
-        if (loggedIn === false) {
-            signoutBtn.classList.toggle("active");
-            sidesignoutBtn.classList.toggle("active")
-            loginBtn.classList.toggle("active");
-            sideloginBtn.classList.toggle("active")
-        }
-        else {
-            loginBtn.classList.toggle("active");
-            sideloginBtn.classList.toggle("active")
-            signoutBtn.classList.toggle("active");
-            sidesignoutBtn.classList.toggle("active")
-        }
-    })
-}) 
-
-// [sideloginBtn, loginBtn].forEach(btn => {
-//     btn?.addEventListener('click', function () {
-//         loggedIn = !loggedIn;
-//         console.log(loggedIn);
-//         if (loggedIn === false) {
-//             signoutBtn.classList.toggle("active");
-//             sidesignoutBtn.classList.toggle("active")
-//             loginBtn.classList.toggle("active");
-//             sideloginBtn.classList.toggle("active")
-//         }
-//         else {
-//             loginBtn.classList.toggle("active");
-//             sideloginBtn.classList.toggle("active")
-//             signoutBtn.classList.toggle("active");
-//             sidesignoutBtn.classList.toggle("active")
-//         }
-//     })
-// })
-
-// document.querySelectorAll('.login').addEventListener('click', function (){
-//     loggedIn = !loggedIn
-// })
+if (localStorage.getItem('logged_in') == 'true'){
+    login.innerText = 'Logout'
+    sideloginBtn.innerText = 'Logout'
+}
+else {
+    login.innerText = 'Login'
+    sideloginBtn.innerText = 'Login'
+}
 
 document.querySelectorAll('.card').forEach(card => {
     card.addEventListener('click', function () {
-        // const image = this.querySelector('img').src;
-        // const name = this.querySelector('.text-head').innerText;
-        // const price = this.querySelector('.text-body').innerText;
-
-        // products = { image, name, price };
-        // sessionStorage.setItem('selectedProduct', JSON.stringify(product));
         window.location.href = './assets/HTML/products.html';
     });
 });
 
 const product = JSON.parse(sessionStorage.getItem('selectedProduct'))
-
-// if (product) {
-//        document.getElementById('product-details').innerHTML = `
-//       <img src="${product.image}" alt="${product.name}" width="300">
-//       <h2>${product.name}</h2>
-//       <p style="font-size: 1.1rem, color: red !important">Price: ${product.price}</p>
-//     `;
-// } else {
-//        document.getElementById('product-details').innerHTML = `<p>No product found.</p>`;
-// }
 
 function decrease() {
     value = document.getElementById('number').innerText
@@ -104,6 +44,27 @@ function increase() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+    [sideloginBtn, login].forEach(btn => {
+        btn.addEventListener('click', function () {
+            if (localStorage.getItem('logged_in') === 'true') {
+                // console.log(localStorage.getItem('logged_in'), "qweqweqsad3")
+                localStorage.setItem('logged_in', false);
+                sideloginBtn.innerText = 'Login'
+                login.innerText = 'Login'
+            }
+            else {
+                // console.log(localStorage.getItem('logged_in'), "werwerwer")
+                let path = window.location.pathname;
+                localStorage.setItem("path",path)
+                if (path.endsWith("index.html") || path === "/") {
+                    window.location.href = "./assets/HTML/signup.html";
+                } else {
+                    window.location.href = "./signup.html";
+                }
+            }
+        })
+    })
+
     document.querySelectorAll('.incrementor').forEach(incrementor => {
         const numberDiv = incrementor.querySelector('.number');
         const lessBtn = incrementor.querySelector('.less');

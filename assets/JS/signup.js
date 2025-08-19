@@ -100,7 +100,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         console.log(username, password, email, fname)
         if (redirect) {
-            window.location.href = "../../index.html"
+            localStorage.setItem('logged_in', true)
+            window.location.href = localStorage.getItem('path')
         }
     });
 })

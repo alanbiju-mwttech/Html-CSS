@@ -11,7 +11,7 @@ body {
 
 .login{
     background-color: white;
-    width: 25%;
+    width: 30%;
     margin: auto;
     border: #121d2e 3px solid; 
     border-radius: 20px;
@@ -82,7 +82,7 @@ body {
     color: red;
 }
 
-@media (max-width:780px) {
+@media (max-width:800px) {
     .login{
         width: 50%;
     }
