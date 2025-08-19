@@ -56,9 +56,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 // console.log(localStorage.getItem('logged_in'), "werwerwer")
                 let path = window.location.pathname;
                 localStorage.setItem("path",path)
-                if (path.endsWith("index.html") || path === "/") {
+                if (path.endsWith("index.html")) {
                     window.location.href = "./assets/HTML/signup.html";
-                } else {
+                }
+                else if (path.endsWith("/")){
+                    window.location.href = "assets/HTML/signup.html";
+                }
+                else {
                     window.location.href = "./signup.html";
                 }
             }
